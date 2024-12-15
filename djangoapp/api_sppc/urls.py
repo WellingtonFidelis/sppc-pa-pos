@@ -8,7 +8,8 @@ from api_sppc.views import (
     PrincipioAtivoAPIView,
     ConsumidorAPIView,
     TratamentoAPIView,
-    ProdutoRecomendadoAPIView
+    ProdutoRecomendadoAPIView,
+    ConsumidorProdutoRecomendadoAPIView
 )
 
 
@@ -22,4 +23,5 @@ urlpatterns = [
     path(route="consumidor", view=ConsumidorAPIView.as_view(), name="consumidor"),
     path(route="tratamento", view=TratamentoAPIView.as_view(), name="tratamento"),
     path(route="produtos-recomendados/<int:pk>/", view=ProdutoRecomendadoAPIView.as_view(), name="produtos-recomendados"),
+    path(route="consumidor-produto-recomendacao", view=ConsumidorProdutoRecomendadoAPIView.as_view(), name="consumidor-produto-recomendacao"),
 ]
